@@ -1,0 +1,45 @@
+export const employeeSchema = {
+  $schema: "http://json-schema.org/draft-04/schema#",
+  $id: "https://example.com/employee.schema.json",
+  title: "Record of employee",
+  description: "This document records the details of an employee",
+  type: "object",
+  properties: {
+    id: {
+      description: "A unique identifier for an employee",
+      type: "number",
+    },
+    name: {
+      description: "Full name of the employee",
+      type: "string",
+    },
+    age: {
+      description: "Age of the employee",
+      type: "number",
+    },
+    hobbies: {
+      description: "Hobbies of the employee",
+      type: "object",
+      properties: {
+        quantity: {
+          description: "Quantity of hobbies",
+          type: "number",
+        },
+        indoor: {
+          type: "array",
+          items: {
+            description: "List of indoor hobbies",
+            type: "string",
+          },
+        },
+        outdoor: {
+          type: "array",
+          items: {
+            description: "List of outdoor hobbies",
+            type: "string",
+          },
+        },
+      },
+    },
+  },
+};
