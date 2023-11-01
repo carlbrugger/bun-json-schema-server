@@ -1,7 +1,10 @@
+import { addressSchema } from "./schemas/address.schema";
+import { complexDataSchema } from "./schemas/complexData.schema";
 import { customerSchema } from "./schemas/customer.schema.json";
 import { employeeSchema } from "./schemas/employee.schema.json";
 import { personSchema } from "./schemas/person.schema.json";
 import { productSchema } from "./schemas/product.schema.json";
+import { pureDataSchema } from './schemas/pureData.schema';
 
 const server = Bun.serve({
   port: 1234,
@@ -24,6 +27,12 @@ const server = Bun.serve({
       responseBody = JSON.stringify(productSchema);
     } else if (url.pathname === "/schema/employee") {
       responseBody = JSON.stringify(employeeSchema);
+    } else if (url.pathname === "/schema/pureData"){
+      responseBody = JSON.stringify(pureDataSchema);
+    } else if (url.pathname === "/schema/complexData"){
+      responseBody = JSON.stringify(complexDataSchema);
+    } else if (url.pathname === "/schema/address"){
+      responseBody = JSON.stringify(addressSchema);
     }
     return new Response(responseBody, {
       headers: {
