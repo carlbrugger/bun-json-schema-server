@@ -1,42 +1,34 @@
 export const addressSchema = {
-  "$id": "https://example.com/address.schema.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "An address similar to http://microformats.org/wiki/h-card",
-  "type": "object",
-  "properties": {
-    "postOfficeBox": {
-      "type": "string"
+  $id: "https://example.com/address.schema.json",
+  $schema: "https://json-schema.org/draft/2020-12/schema",
+  description: "An address similar to http://microformats.org/wiki/h-card",
+  type: "object",
+  properties: {
+    postOfficeBox: {
+      type: "string",
     },
-    "extendedAddress": {
-      "type": "string"
+    extendedAddress: {
+      type: "string",
     },
-    "streetAddress": {
-      "type": "string"
+    streetAddress: {
+      type: "string",
     },
-    "locality": {
-      "type": "string"
+    locality: {
+      type: "string",
     },
-    "region": {
-      "type": "string"
+    region: {
+      type: "string",
     },
-    "postalCode": {
-      "type": "string"
+    postalCode: {
+      type: "string",
     },
-    "countryName": {
-      "type": "string"
-    }
+    countryName: {
+      type: "string",
+    },
   },
-  "required": [
-    "locality",
-    "region",
-    "countryName"
-  ],
-  "dependentRequired": {
-    "postOfficeBox": [
-      "streetAddress"
-    ],
-    "extendedAddress": [
-      "streetAddress"
-    ]
-  }
-}
+  required: ["locality", "region", "countryName"],
+  dependentRequired: {
+    postOfficeBox: ["streetAddress"],
+    extendedAddress: ["streetAddress"],
+  },
+};

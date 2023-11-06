@@ -5,10 +5,7 @@
       "description": "A basic flatfile blueprint for reference rather than testing",
       "slug": "exampleSheet",
       "readOnly": false,
-      "access": [
-        "add",
-        "edit"
-      ],
+      "access": ["add", "edit"],
       "fields": [
         {
           "key": "stringColumn",
@@ -50,10 +47,7 @@
       "description": "A referenced sheet",
       "slug": "nestedSheet",
       "readOnly": false,
-      "access": [
-        "add",
-        "edit"
-      ],
+      "access": ["add", "edit"],
       "fields": [
         {
           "key": "nestedUniqueNumberColumn",
